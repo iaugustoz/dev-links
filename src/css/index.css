@@ -19,6 +19,7 @@ body {
 #container {
   width: 360px;
   margin: 56px auto 0px;
+  padding: 0 24px;
 }
 
 #profile {
@@ -43,6 +44,8 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  padding: 24px 0;
 }
 
 ul li a {
@@ -75,4 +78,29 @@ ul li a:hover {
 ul li a:active {
   transform: scale(1.025);
   transition: all ease-in-out 200ms;
+}
+
+/* SOCIAL LINKS */
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+#social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 16px;
 }
