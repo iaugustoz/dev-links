@@ -6,14 +6,35 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: #fff;
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --right-value: 0;
+  --bg-url: url('../../assets/bg-mobile.jpg');
+  --switch-bg-url: url('../../assets/sun.svg');
+}
+
+.light {
+  --text-color: black;
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --right-value: 100;
+  --switch-bg-url: url('../../assets/moon-stars.svg');
+  --bg-url: url('../../assets/bg-mobile-light.jpg');
+}
+
 body * {
   font-family: 'Inter', 'Arial', 'Times New Roman';
-  color: #fff;
+  color: var(--text-color);
 }
 
 body {
-  background-image: url('../../assets/bg-mobile.jpg');
-  background-size: cover;
+  background: var(--bg-url) no-repeat top center/cover;
 }
 
 #container {
@@ -22,6 +43,7 @@ body {
   padding: 0 24px;
 }
 
+/* PROFILE */
 #profile {
   text-align: center;
   padding: 24px;
@@ -35,6 +57,41 @@ body {
   padding-top: 8px;
   font-weight: 500;
   line-height: 24px;
+}
+
+/* SWITCH */
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+  cursor: pointer;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: #fff var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  position: absolute;
+  top: 50%;
+  right: var(--right-value);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background-color: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
 
 /* GROUP BUTTONS */
@@ -55,8 +112,8 @@ ul li a {
 
   padding: 16px 24px;
 
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
 
   backdrop-filter: blur(4px);
@@ -71,8 +128,8 @@ ul li a {
 }
 
 ul li a:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid #fff;
+  background: var(--surface-color-hover);
+  border: 1.5px solid --text-color;
 }
 
 ul li a:active {
@@ -101,6 +158,17 @@ ul li a:active {
 }
 
 #social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--highlight-color);
   padding: 16px;
+}
+
+/* FOOTER */
+footer {
+  font-size: 14px;
+  padding: 24px 0;
+  text-align: center;
+}
+
+span {
+  color: red;
 }
