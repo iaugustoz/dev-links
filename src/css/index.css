@@ -12,7 +12,6 @@
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(0, 0, 0, 0.05);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --right-value: 100;
   --bg-url: url('../../assets/bg-mobile.jpg');
   --switch-bg-url: url('../../assets/sun.svg');
 }
@@ -23,7 +22,6 @@
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --right-value: 0;
   --switch-bg-url: url('../../assets/moon-stars.svg');
   --bg-url: url('../../assets/bg-mobile-light.jpg');
 }
@@ -40,7 +38,7 @@ body {
 
 #container {
   width: 100%;
-  max-width: 588px;
+  max-width: 450px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -80,9 +78,19 @@ body {
 
   position: absolute;
   top: 50%;
-  right: var(--right-value);
+  left: 0;
   transform: translateY(-50%);
   z-index: 1;
+
+  animation: slide-out 0.2s forwards;
+}
+
+.light #switch button {
+  animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -183,5 +191,24 @@ span {
 
   .light {
     --bg-url: url('../../assets/bg-mobile-light.jpg');
+  }
+}
+
+/* ANIMATION */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
