@@ -1,12 +1,12 @@
 # DevLinks
 
 <div align="center">
-<img src="src/img/site.png" width="2000px" alt="Imagem do site" title="Imagem do site"/>
+<img src="assets/preview.png" width="2000px" alt="Imagem do site" title="Imagem do site"/>
 </div>
 
 ## Descrição
 
-Descrição em andamento.
+DevLinks: Seu cartão de visitas online personalizado e um agregador de links para profissionais de tecnologia. Crie uma presença online única e centralize seus links, portfólio e informações de contato em um só lugar. Compartilhe facilmente sua presença digital com o mundo e mantenha suas conexões atualizadas com este prático serviço de agendamento de links.
 
 ## Status do projeto
 
@@ -14,11 +14,12 @@ Projeto em andamento.
 
 ## Pré-requisitos
 
-### Linguagens
+### Tecnologias
 
 - HTML (v5.0 ou superior);
 - CSS (v3.0 ou superior);
-- JavaScript (ECMAScript 2022).
+- JavaScript (ECMAScript 2022);
+- Figma.
 
 ## Instalando
 
