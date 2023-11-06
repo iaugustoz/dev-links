@@ -10,7 +10,7 @@ DevLinks: Seu cartão de visitas online personalizado e um agregador de links pa
 
 ## Status do projeto
 
-Projeto em andamento.
+Projeto concluído.
 
 ## Pré-requisitos
 
